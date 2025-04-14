@@ -8,7 +8,7 @@ router.get("/", productController.getAllProducts);
 router.get("/filterProduct", productController.getFilterProduct);
 // Kiểm tra số lượng tồn sản phẩm
 router.get("/stock/:id", productController.getProductStock);
-// Đếm sản phẩm theo danh mục
+// Đếm sản phẩm theo danh mục kaka
 router.get("/countByCategories", productController.getProductCountByCategory);
 // Đếm tổng số sản phẩm
 router.get("/countProducts", productController.getTotalProductCount);
