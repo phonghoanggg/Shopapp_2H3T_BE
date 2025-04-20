@@ -13,7 +13,7 @@ import productRoute from "./routes/product.routes.js";
 import userRoute from "./routes/user.routes.js";
 dotenv.config();
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 10000;
 
 const connectDb = async () => {
   try {
