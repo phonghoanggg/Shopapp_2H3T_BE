@@ -11,6 +11,7 @@ import favoriteRoute from "./routes/favorite.routes.js";
 import oderRoute from "./routes/oder.routes.js";
 import productRoute from "./routes/product.routes.js";
 import userRoute from "./routes/user.routes.js";
+import imageRoutes from "./routes/upload.routes.js";
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 10000;
@@ -43,6 +44,7 @@ app.use("/auth", authRoute);
 app.use("/order", oderRoute);
 app.use("/cart", cartRoute);
 app.use("/favorite", favoriteRoute);
+app.use("/image", imageRoutes);
 
 app.listen(PORT, () => {
   connectDb();
