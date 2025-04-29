@@ -6,13 +6,17 @@ const productSchema = new mongoose.Schema({
   name: { type: String, required: true, unique: true },
   description: { type: String, required: true },
   price: { type: Number, required: true },
-  newprice: { type: Number, required: true },
+  newprice: { type: Number, required: false },
   discount: { type: Number },
   category: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Category",
   },
-  images: [{ type: String }],
+  images: [{
+    id: { type: String, required: false },
+    url: { type: String, required: true },
+    publicId: { type: String, required: false }
+  }],
   stock: { type: Number, default: 0 },
   ratings: [
     {
